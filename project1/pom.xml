@@ -20,6 +20,10 @@
         <module>eureka-client</module>
         <module>eureka-client2</module>
         <module>eureka-feign</module>
+        <module>eureka-feign2</module>
+        <module>eureka-hystrix</module>
+        <module>eureka-hystrix2</module>
+        <module>eureka-ribbon</module>
     </modules>
 
     <properties>
