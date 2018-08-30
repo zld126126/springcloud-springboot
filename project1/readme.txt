@@ -8,7 +8,9 @@ erueka-hystrix是断路器 8766
 erueka-hystrix2是断路器(集成Hystrix Dashboard (断路器：Hystrix 仪表盘)) 8768
 erueka-zuul是服务网关 8769 Zuul的主要功能是路由转发和过滤器。路由功能是微服务的一部分，比如／api/user转发到到user服务，/api/shop转发到到shop服务。zuul默认和Ribbon结合实现了负载均衡的功能。
 erueka-config-model 分布式配置中心组件(模块 包括config-server 和config-client)
-
+erueka-config-model-bigger 分布式配置中心组件集群(模块 包括config-server 和config-client)
+erueka-config-server-default 分布式配置中心服务层 8770
+erueka-config-client-default 分布式配置中心客户层 8771
 
 启动顺序
 1.server
@@ -47,3 +49,10 @@ http://localhost:8769/api-a/hi?name=forezp&token=2
 启动子model server 8888和 子model client 8881
 访问http://localhost:8881/hi
 
+9.erueka-config-model-bigger 分布式配置中心组件集群,调用效果
+启动子model server 和 client
+访问http://localhost:8881/hi
+
+10.erueka-config-server-default 分布式配置中心服务层 8770 erueka-config-client-default 分布式配置中心客户层 8771,调用效果
+先启动server 再启动config-server 再启动config-client
+访问http://localhost:8771/hi
