@@ -2,32 +2,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springcloud-springboot</artifactId>
+        <groupId>com.dongtech</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.dongtech</groupId>
-    <artifactId>springcloud-springboot</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>eureka-config-model</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.3.RELEASE</version>
-        <relativePath/>
-    </parent>
-
     <modules>
-        <module>eureka-server</module>
-        <module>eureka-client</module>
-        <module>eureka-client2</module>
-        <module>eureka-feign</module>
-        <module>eureka-feign2</module>
-        <module>eureka-hystrix</module>
-        <module>eureka-hystrix2</module>
-        <module>eureka-ribbon</module>
-        <module>eureka-zuul</module>
-        <module>eureka-config-model</module>
-        <module>eureka-config-model-bigger</module>
+        <module>eureka-config-server</module>
+        <module>eureka-config-client</module>
     </modules>
 
     <properties>
