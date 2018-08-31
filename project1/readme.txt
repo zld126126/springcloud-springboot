@@ -11,6 +11,8 @@ erueka-config-model 分布式配置中心组件(模块 包括config-server 和co
 erueka-config-model-bigger 分布式配置中心组件集群(模块 包括config-server 和config-client)
 erueka-config-server-default 分布式配置中心服务层 8770
 erueka-config-client-default 分布式配置中心客户层 8771
+erueka-bus 消息队列 rabbitmq 8773
+
 
 启动顺序
 1.server
@@ -56,3 +58,12 @@ http://localhost:8769/api-a/hi?name=forezp&token=2
 10.erueka-config-server-default 分布式配置中心服务层 8770 erueka-config-client-default 分布式配置中心客户层 8771,调用效果
 先启动server 再启动config-server 再启动config-client
 访问http://localhost:8771/hi
+
+11.erueka-bus 消息队列 rabbitmq 8773
+一.访问http://localhost:8773/hi
+二.更改https://github.com/zld126126/springcloud-springboot/blob/master/cloud-configfile/eureka-bus-dev.properties
+foo = foo version 3
+三.(post请求,必须是post,get不支持)访问http://localhost:8773/actuator/bus-refresh?destination=**
+/actuator/bus-refresh接口可以指定服务，即使用”destination”参数，比如 “/actuator/bus-refresh?destination=customers:**” 即刷新服务名为customers的所有服务。
+四.重新访问访问http://localhost:8773/hi
+从而使整个微服务集群都达到更新配置文件。
