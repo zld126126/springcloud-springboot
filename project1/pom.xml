@@ -21,6 +21,7 @@
         <module>eureka-server</module>
         <module>eureka-client</module>
         <module>eureka-client2</module>
+        <module>eureka-client3</module>
         <module>eureka-feign</module>
         <module>eureka-feign2</module>
         <module>eureka-hystrix</module>
@@ -31,6 +32,10 @@
         <module>eureka-config-model-bigger</module>
         <module>eureka-config-server-default</module>
         <module>eureka-config-client-default</module>
+        <module>eureka-zipkin-service1</module>
+        <module>eureka-zipkin-service2</module>
+        <module>eureka-server2</module>
+        <module>eureka-server3</module>
     </modules>
 
     <properties>

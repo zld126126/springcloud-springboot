@@ -12,7 +12,9 @@ erueka-config-model-bigger 分布式配置中心组件集群(模块 包括config
 erueka-config-server-default 分布式配置中心服务层 8770
 erueka-config-client-default 分布式配置中心客户层 8771
 erueka-bus 消息队列 rabbitmq 8773
-
+erueka-zipkin-service1 依赖关系服务展示
+erueka-zipkin-service2 依赖关系服务展示
+erueka-server2/server3 分布式注册中心 测试用erueka-client3 展示效果
 
 启动顺序
 1.server
@@ -67,3 +69,14 @@ foo = foo version 3
 /actuator/bus-refresh接口可以指定服务，即使用”destination”参数，比如 “/actuator/bus-refresh?destination=customers:**” 即刷新服务名为customers的所有服务。
 四.重新访问访问http://localhost:8773/hi
 从而使整个微服务集群都达到更新配置文件。
+
+12.zipkin
+1.启动 zipkin-server.jar
+2.启动zipkin-service1
+3.启动zipkin-service2
+访问http://localhost:8775/miya
+访问http://localhost:8774/hi
+访问http://localhost:9411 依赖关系查看效果
+
+13.erueka-server2/server3
+启动server2 启动server3 启动client3 查看localhost:8761查看效果
