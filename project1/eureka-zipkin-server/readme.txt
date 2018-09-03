@@ -2,4 +2,4 @@
 
 2. ‰»Îjava -jar zipkin-server-2.10.1-exec.jar
 
-3.∑√Œ localhost:9411
+3.∑√Œ http://localhost:9411
